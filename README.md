@@ -1,6 +1,6 @@
 # Random Words API
 
-![build-test](https://github.com/mskian/random-words-api/workflows/build-test/badge.svg)
+![build-test](https://github.com/mskian/random-words-api/workflows/build-test/badge.svg) [![dependencies Status](https://david-dm.org/mskian/random-words-api/status.svg)](https://david-dm.org/mskian/random-words-api)  
 
 Get Random Words (with pronunciation) for Free using this API
 
