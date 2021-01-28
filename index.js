@@ -1,12 +1,12 @@
-var express = require('express');
-var cheerio = require('cheerio');
-var request = require('request');
-var nlp = require('compromise');
-var nlpPronounce = require('compromise-pronounce');
+const express = require('express');
+const cheerio = require('cheerio');
+const nlp = require('compromise');
+const nlpPronounce = require('compromise-pronounce');
 nlp.extend(nlpPronounce);
 const randomUseragent = require('random-useragent');
-var rua = randomUseragent.getRandom();
-var app = express();
+const axios = require('axios');
+const rua = randomUseragent.getRandom();
+const app = express();
 var wordOfDay = [];
 
 app.get('/', function(req, res) {
@@ -18,19 +18,17 @@ app.get('/', function(req, res) {
     res.header('X-Content-Type-Options', 'nosniff');
     res.header('Strict-Transport-Security', 'max-age=63072000');
     res.setHeader('Content-Type', 'application/json');
-    app.disable( 'x-powered-by' );
+    app.disable('x-powered-by');
 
-    request({
+    axios({
         method: 'GET',
         url: 'https://randomword.com/',
-        proxy: proxyGenerator(),
         headers: {
             'User-Agent': rua
         }
-    }, function(err, response, body, callback) {
-        if (err) return console.error(err);
+    }).then(function(response) {
 
-        $ = cheerio.load(body);
+        $ = cheerio.load(response.data);
 
         if (wordOfDay.length > 0) {
             wordOfDay = [];
@@ -49,37 +47,20 @@ app.get('/', function(req, res) {
             pronunciation: decodeURI(pronounce.charAt(0).toUpperCase() + pronounce.slice(1))
         })
         console.log("User-Agent:", rua);
-        res.send(JSON.stringify(wordOfDay, null, 4));
+        res.send(JSON.stringify(wordOfDay, null, 2));
         console.log(wordOfDay);
+
+    }).catch(function(error) {
+        if (!error.response) {
+            console.log('API URL is Missing');
+            res.json('API URL is Missing');
+        } else {
+            console.log('Something Went Wrong - Enter the Correct API URL');
+            res.json('Something Went Wrong - Enter the Correct API URL');
+        }
     });
 
 });
-
-function proxyGenerator() {
-    let ip_addresses = [];
-    let port_numbers = [];
-    let proxy;
-
-    request("https://sslproxies.org/", function(error, response, html) {
-        if (!error && response.statusCode == 200) {
-            const $ = cheerio.load(html);
-
-            $("td:nth-child(1)").each(function(index, value) {
-                ip_addresses[index] = $(this).text();
-            });
-
-            $("td:nth-child(2)").each(function(index, value) {
-                port_numbers[index] = $(this).text();
-            });
-        } else {
-            console.log("Error loading proxy, please try again");
-        }
-
-        ip_addresses.join(", ");
-        port_numbers.join(", ");
-
-    });
-}
 
 var port = 3000;
 app.listen(port, function() {
