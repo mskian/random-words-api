@@ -77,7 +77,7 @@ compromise-pronounce@0.0.3:
   resolved "https://registry.yarnpkg.com/compromise-pronounce/-/compromise-pronounce-0.0.3.tgz#1fb41006304e0247029e0571fa45ea267b302f84"
   integrity sha512-Cjcp0P18/OUjqNoWmx7Twrz2zBi/KEitiarlPzlpVY0KYsuQ3akZiu4My8UGdfhUn51tRPkWhJPWhMxioUBqCw==
 
-compromise@^13.8.0:
+compromise@^13.9.2:
   version "13.9.2"
   resolved "https://registry.yarnpkg.com/compromise/-/compromise-13.9.2.tgz#57a986a6e268a182c771bb09353d867dfc94502b"
   integrity sha512-I4h1zEphlxjHyXbJyvryVfTX8CrW08nzMqpmJfIYTnkeDwogAQ6gQX1pSSCPwjboNX9zW2d3LohFwXiHktapcA==
