@@ -78,9 +78,9 @@ compromise-pronounce@0.0.3:
   integrity sha512-Cjcp0P18/OUjqNoWmx7Twrz2zBi/KEitiarlPzlpVY0KYsuQ3akZiu4My8UGdfhUn51tRPkWhJPWhMxioUBqCw==
 
 compromise@^13.8.0:
-  version "13.8.0"
-  resolved "https://registry.yarnpkg.com/compromise/-/compromise-13.8.0.tgz#05dc8a0e3a248b499fc49b3b6a451af0c74c8efa"
-  integrity sha512-j+hIo096v9S3lEC9iEFP2nVqCDwvWD3GyqvL/fSIo4CcJ8ddFTbvufeTWcvfcpxU8dLkKLmcUIvM3EXu4Sw5mg==
+  version "13.9.2"
+  resolved "https://registry.yarnpkg.com/compromise/-/compromise-13.9.2.tgz#57a986a6e268a182c771bb09353d867dfc94502b"
+  integrity sha512-I4h1zEphlxjHyXbJyvryVfTX8CrW08nzMqpmJfIYTnkeDwogAQ6gQX1pSSCPwjboNX9zW2d3LohFwXiHktapcA==
   dependencies:
     efrt-unpack "2.2.0"
 
@@ -184,7 +184,12 @@ encodeurl@~1.0.2:
   resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
   integrity sha1-rT/0yG7C0CkyL1oCw6mmBslbP1k=
 
-entities@^2.0.0, entities@~2.1.0:
+entities@^2.0.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/entities/-/entities-2.2.0.tgz#098dc90ebb83d8dffa089d55256b351d34c4da55"
+  integrity sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==
+
+entities@~2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/entities/-/entities-2.1.0.tgz#992d3129cf7df6870b96c57858c249a120f8b8b5"
   integrity sha512-hCx1oky9PFrJ611mf0ifBLBRW8lUUVRlFolb5gWRfIELabBlbp9xZvrqZLZAs+NxFnbfQoeGd8wDkygjg7U85w==
