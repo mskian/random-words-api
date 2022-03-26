@@ -77,12 +77,14 @@ compromise-pronounce@0.0.5:
   resolved "https://registry.yarnpkg.com/compromise-pronounce/-/compromise-pronounce-0.0.5.tgz#4200596e1a657ccd87f616bfc917338003858dc0"
   integrity sha512-cjLx6JvyjI7u3OGmXhakmr8WwPhR55uukyMgeIbj2tgz3WjZoGT55DygKHNSjx32MZN6sJJxtT1zSjgbWMDmtw==
 
-compromise@^13.11.4:
-  version "13.11.4"
-  resolved "https://registry.yarnpkg.com/compromise/-/compromise-13.11.4.tgz#3136e6d2c2cca822ba7cebd140c9f27f405b67f1"
-  integrity sha512-nBITcNdqIHSVDDluaG6guyFFCSNXN+Hu87fU8VlhkE5Z0PwTZN1nro2O7a8JcUH88nB5EOzrxd9zKfXLSNFqcg==
+compromise@^14.0.0:
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/compromise/-/compromise-14.0.0.tgz#4d4b766494906e7fad645ed1ea8b2aa109bffb94"
+  integrity sha512-//uDMAfHPKygivhYG1+6kSaugS0FbuUWVuwCAtI8FR2AQVa6AWNbOBph/Qzx2to1anRoYvmN1VG2lN8VN6hTOg==
   dependencies:
-    efrt-unpack "2.2.0"
+    efrt "2.5.0"
+    grad-school "0.0.4"
+    suffix-thumb "4.0.2"
 
 content-disposition@0.5.4:
   version "0.5.4"
@@ -225,10 +227,10 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-efrt-unpack@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/efrt-unpack/-/efrt-unpack-2.2.0.tgz#b05dbec0fb8cb346a27840e00c969df9c72fee52"
-  integrity sha512-9xUSSj7qcUxz+0r4X3+bwUNttEfGfK5AH+LVa1aTpqdAfrN5VhROYCfcF+up4hp5OL7IUKcZJJrzAGipQRDoiQ==
+efrt@2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/efrt/-/efrt-2.5.0.tgz#94447af614a31f4cb7459ce9574b96fcaef4ca92"
+  integrity sha512-V/tJRLSD3sbd1hOw2TVvMLeQnLZeH9STMoUg649M6Zufb9Xabho+nkORxORu1SiCX5hh4e7yhRbcwAUIdXwLOQ==
 
 encodeurl@~1.0.2:
   version "1.0.2"
@@ -313,6 +315,11 @@ fresh@0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
   integrity sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=
+
+grad-school@0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/grad-school/-/grad-school-0.0.4.tgz#c0d478f2fbfc5601b5061a4859c054cb6a8aaa04"
+  integrity sha512-wIaLSmqqMNiNJGMUq45jokvb+pTW0xe52k1+iY5aQgGNVM9xf1OpWuIDqHxxSqlRf/nqt0D/NIpj61+2z87q+g==
 
 htmlparser2@^6.1.0:
   version "6.1.0"
@@ -542,6 +549,11 @@ setprototypeof@1.2.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
+
+suffix-thumb@4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/suffix-thumb/-/suffix-thumb-4.0.2.tgz#9303c1be8252bf79d9c57e5737d7d849d1f6abc9"
+  integrity sha512-CCvCAr7JyeQoO+/lyq3P2foZI/xJz5kpG3L6kg2CaOf9K2/gaM9ixy/JTuRwjEK38l306zE7vl3JoOZYmLQLlA==
 
 toidentifier@1.0.1:
   version "1.0.1"
