@@ -75,7 +75,7 @@ app.get('/', apiRequestLimiter, function(req, res) {
         var pronounce = pronounced;
         wordOfDay.push({
             word: decodeURI(word.charAt(0).toUpperCase() + word.slice(1)),
-            definition: decodeURI(definition.charAt(0).toUpperCase() + definition.slice(1)),
+            definition: decodeURI(definition.charAt(0).toUpperCase() + definition.slice(1)).trim(),
             pronunciation: decodeURI(pronounce)
         })
         res.send(JSON.stringify(wordOfDay, null, 2));
