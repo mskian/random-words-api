@@ -1,56 +1,13 @@
-import express from 'express';
 import * as cheerio from 'cheerio';
-import cors from 'cors';
 import nlp from 'compromise';
 import speechPlugin from 'compromise-speech'
 nlp.plugin(speechPlugin)
 import randomUseragent from 'random-useragent';
 import axios from 'axios';
-import { rateLimit } from 'express-rate-limit';
 import dummydata from './error.js';
 
 const rua = randomUseragent.getRandom();
-const app = express();
-const port = process.env.PORT || 3000;
 var wordOfDay = [];
-
-var allowedOrigins = ['http://localhost:8080',
-    'https://words.sanweb.info',
-    'https://sanweb.info/'
-];
-
-app.use(cors({
-    origin: function(origin, callback) {
-        if (!origin) return callback(null, true);
-        if (allowedOrigins.indexOf(origin) === -1) {
-            var msg = 'The CORS policy for this site does not ' +
-                'allow access from the specified Origin.';
-            //return callback(new Error(msg), false);
-             return callback((msg));
-        }
-        return callback(null, true);
-    }
-}));
-
-const apiRequestLimiter = rateLimit({
-    windowMs: 1 * 60 * 1000,
-    max: 40,
-    handler: function (req, res) {
-        return res.status(429).json(
-          dummydata()
-        )
-    }
-})
-
-app.get('/', apiRequestLimiter, function(req, res) {
-    res.header('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
-    res.header('Access-Control-Allow-Methods', 'GET');
-    res.header('X-Frame-Options', 'DENY');
-    res.header('X-XSS-Protection', '1; mode=block');
-    res.header('X-Content-Type-Options', 'nosniff');
-    res.header('Strict-Transport-Security', 'max-age=63072000');
-    res.setHeader('Content-Type', 'application/json');
-    app.disable('x-powered-by');
 
     axios({
         method: 'GET',
@@ -87,16 +44,3 @@ app.get('/', apiRequestLimiter, function(req, res) {
             console.log(dummydata());
         }
     });
-
-});
-
-app.use('/', function(req, res) {
-    res.status(404).json({
-        error: 1,
-        message: 'Data not Found'
-    });
-})
-
-app.listen(port, function() {
-    console.log('listening on port ' + port);
-});
