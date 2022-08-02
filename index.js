@@ -90,12 +90,39 @@ app.get('/', apiRequestLimiter, function(req, res) {
 
 });
 
+app.get('/api/:word', apiRequestLimiter, function(req, res) {
+    res.header('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
+    res.header('Access-Control-Allow-Methods', 'GET');
+    res.header('X-Frame-Options', 'DENY');
+    res.header('X-XSS-Protection', '1; mode=block');
+    res.header('X-Content-Type-Options', 'nosniff');
+    res.header('Strict-Transport-Security', 'max-age=63072000');
+    res.setHeader('Content-Type', 'application/json');
+    app.disable('x-powered-by');
+
+    const userword = req.params.word || "Automation";
+    const pronounceword = userword;
+    let doc = nlp(pronounceword);
+    const pronounced = doc.terms().soundsLike()
+    const pronounce = decodeURI(pronounced);
+    res.status(200).json(pronounce);
+
+});
+
 app.use('/', function(req, res) {
     res.status(404).json({
         error: 1,
-        message: 'Data not Found'
+        message: 'Page or Data not Found'
     });
 })
+
+app.use((err, req, res, next) => {
+    if (!err) return next();
+    return res.status(403).json({
+        error: 1,
+        message: 'Page or Data not Found'
+    });
+});
 
 app.listen(port, function() {
     console.log('listening on port ' + port);
