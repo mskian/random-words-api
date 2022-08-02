@@ -90,6 +90,24 @@ app.get('/', apiRequestLimiter, function(req, res) {
 
 });
 
+app.get('/api/:word', apiRequestLimiter, function(req, res) {
+    res.header('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
+    res.header('Access-Control-Allow-Methods', 'GET');
+    res.header('X-Frame-Options', 'DENY');
+    res.header('X-XSS-Protection', '1; mode=block');
+    res.header('X-Content-Type-Options', 'nosniff');
+    res.header('Strict-Transport-Security', 'max-age=63072000');
+    res.setHeader('Content-Type', 'application/json');
+    app.disable('x-powered-by');
+
+    var userword = encodeURIComponent(req.params.word) || "Automation";
+    let wordData = nlp(userword);
+    var pronouncedWord = wordData.terms().soundsLike()
+    var getPronounce = decodeURIComponent(pronouncedWord);
+    res.status(200).json(getPronounce);
+
+});
+
 app.use('/', function(req, res) {
     res.status(404).json({
         error: 1,
