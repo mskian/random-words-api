@@ -8,6 +8,7 @@ import randomUseragent from 'random-useragent';
 import axios from 'axios';
 import { rateLimit } from 'express-rate-limit';
 import dummydata from './error.js';
+import limitData from './rate.js';
 
 const rua = randomUseragent.getRandom();
 const app = express();
@@ -37,7 +38,7 @@ const apiRequestLimiter = rateLimit({
     max: 40,
     handler: function (req, res) {
         return res.status(429).json(
-          dummydata()
+            limitData()
         )
     }
 })
