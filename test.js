@@ -13,7 +13,8 @@ var wordOfDay = [];
         method: 'GET',
         url: 'https://randomword.com/',
         headers: {
-            'User-Agent': rua
+            'User-Agent': rua,
+            'Accept-Encoding': 'identity'
         }
     }).then(function(response) {
 
