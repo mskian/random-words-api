@@ -17,7 +17,9 @@ var wordOfDay = [];
 
 var allowedOrigins = ['http://localhost:8080',
     'https://words.sanweb.info',
-    'https://sanweb.info/'
+    'https://sanweb.info/',
+    'https://mskian.com/',
+    'https://www.mskian.com/'
 ];
 
 app.use(cors({
