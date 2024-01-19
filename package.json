@@ -38,6 +38,6 @@
   "author": "Santhosh Veer",
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.0.3"
   }
 }
