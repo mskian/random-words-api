@@ -2,18 +2,16 @@ import * as cheerio from 'cheerio';
 import nlp from 'compromise';
 import speechPlugin from 'compromise-speech'
 nlp.plugin(speechPlugin)
-import randomUseragent from 'random-useragent';
 import axios from 'axios';
 import dummydata from './error.js';
 
-const rua = randomUseragent.getRandom();
 var wordOfDay = [];
 
     axios({
         method: 'GET',
         url: 'https://randomword.com/',
         headers: {
-            'User-Agent': rua,
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
             'Accept-Encoding': 'identity'
         }
     }).then(function(response) {
