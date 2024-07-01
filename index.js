@@ -6,11 +6,13 @@ import speechPlugin from 'compromise-speech'
 nlp.plugin(speechPlugin)
 import axios from 'axios';
 import { rateLimit } from 'express-rate-limit';
+import UserAgent from 'user-agents';
 import dummydata from './error.js';
 import limitData from './rate.js';
 
 const app = express();
 const port = process.env.PORT || 3000;
+const userAgent = new UserAgent();
 var wordOfDay = [];
 
 var allowedOrigins = ['http://localhost:8080',
@@ -57,7 +59,7 @@ app.get('/', apiRequestLimiter, function(req, res) {
         method: 'GET',
         url: 'https://randomword.com/',
         headers: {
-            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+            'User-Agent': userAgent.toString(),
             'Accept-Encoding': 'identity'
         }
     }).then(function(response) {
