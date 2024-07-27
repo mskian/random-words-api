@@ -11,7 +11,7 @@
     "compromise-speech": "^0.1.0",
     "cors": "^2.8.5",
     "express": "^4.19.2",
-    "express-rate-limit": "^7.3.1",
+    "express-rate-limit": "^7.4.0",
     "user-agents": "^1.1.277"
   },
   "scripts": {
