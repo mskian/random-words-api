@@ -12,7 +12,7 @@
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "express-rate-limit": "^7.4.0",
-    "user-agents": "^1.1.320"
+    "user-agents": "^1.1.323"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
