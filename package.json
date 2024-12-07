@@ -10,7 +10,7 @@
     "compromise": "^14.14.3",
     "compromise-speech": "^0.1.1",
     "cors": "^2.8.5",
-    "express": "^4.21.1",
+    "express": "^4.21.2",
     "express-rate-limit": "^7.4.1",
     "user-agents": "^1.1.375"
   },
