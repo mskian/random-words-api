@@ -939,10 +939,10 @@ unpipe@1.0.0, unpipe@~1.0.0:
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
   integrity sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==
 
-user-agents@^1.1.401:
-  version "1.1.401"
-  resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.1.401.tgz#43eb6a33f7a69f3f814fa97794959cde45084285"
-  integrity sha512-TDiwpHFr0jQ4HBmTSLPYkAXVkEF5kIvCEypKOz6avvjha0kD7nP9OWN4LMNk6aCQO2vm4/qTIw0Tg0CqNgtcHA==
+user-agents@^1.1.402:
+  version "1.1.402"
+  resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.1.402.tgz#a05537aa238e628f892b0c7853e210cfbfe8c8f1"
+  integrity sha512-TCIQ7Rprv59CZkaXZRKBFAc6O3Gt8EgKhRSXkOQDWaz/R2AeXzacIYTPhnKEdF+EDwi9jtg/AmxWhiV49z7Vyg==
   dependencies:
     lodash.clonedeep "^4.5.0"
 
