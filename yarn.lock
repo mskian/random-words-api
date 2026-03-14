@@ -623,11 +623,6 @@ is-promise@^4.0.0:
   resolved "https://registry.yarnpkg.com/is-promise/-/is-promise-4.0.0.tgz#42ff9f84206c1991d26debf520dd5c01042dd2f3"
   integrity sha512-hvpoI6korhJMnej285dSg6nu1+e6uxs7zG3BYAm5byqDsgJNWwxzM6z6iZiAgQR4TJ30JmBTOwqZUw3WlyH3AQ==
 
-lodash.clonedeep@^4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
-  integrity sha512-H5ZhCF25riFd9uB5UCkVKo61m3S/xZk1x4wA6yp/L3RFP6Z/eHH1ymQcGLo7J3GMPfm0V/7m1tryHuGVxpqEBQ==
-
 lru-cache@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-6.0.0.tgz#6d6fe6570ebd96aaf90fcad1dafa3b2566db3a94"
@@ -1018,12 +1013,10 @@ unpipe@~1.0.0:
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
   integrity sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==
 
-user-agents@^1.1.669:
-  version "1.1.669"
-  resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.1.669.tgz#329b1c3f9fb9349f0b974a0b9cf6c0cd6d1d0c1c"
-  integrity sha512-pbIzG+AOqCaIpySKJ4IAm1l0VyE4jMnK4y1thV8lm8PYxI+7X5uWcppOK7zY79TCKKTAnJH3/4gaVIZHsjrmJA==
-  dependencies:
-    lodash.clonedeep "^4.5.0"
+user-agents@^1.1.673:
+  version "1.1.673"
+  resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.1.673.tgz#69d7ccd6f3169f7eb6a95cd433b03ae302caf939"
+  integrity sha512-BlROBbH4BJM09t0WNNLW0MaKpW7tvKoSu6NXiQV61SmQ4y6+HXcYe0Tavj/1fT5GRqNNCrc+8rqcSRb3yJOlpA==
 
 vary@^1, vary@^1.1.2:
   version "1.1.2"
